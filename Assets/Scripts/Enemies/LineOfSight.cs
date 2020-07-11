@@ -18,6 +18,7 @@ public class LineOfSight : MonoBehaviour
     [SerializeField] private float fov = 90f;
     [SerializeField] float viewDistance = 5f;
     [SerializeField] int rayCount = 50;
+    [SerializeField] float textureTileSize = 5;
 
 
 
@@ -53,6 +54,10 @@ public class LineOfSight : MonoBehaviour
 
             Physics.Raycast(origin, GetVectorFromAngle(angle), out raycastHit, viewDistance);
 
+            if (raycastHit.transform.CompareTag("Player"))
+            {
+                // gameManager.PlayerDetected();
+            }
 
             if (raycastHit.collider == null)
             {
@@ -78,6 +83,11 @@ public class LineOfSight : MonoBehaviour
             angle -= angleIncrease;
         }
 
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            Vector3 rotetedVertex = parent.transform.rotation * vertices[i];
+            uv[i] = new Vector2(rotetedVertex.x / textureTileSize, rotetedVertex.z / textureTileSize);
+        }
 
         mesh.vertices = vertices;
         mesh.uv = uv;
