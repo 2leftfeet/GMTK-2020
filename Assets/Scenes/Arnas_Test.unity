@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4417072, g: 0.49061215, b: 0.5705969, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 39edf97e7f157274db597a73a66f3d90,
+  m_LightingDataAsset: {fileID: 112000000, guid: a5912a970b73ad2489ba0a51906386bd,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -1430,12 +1430,13 @@ GameObject:
   - component: {fileID: 945484900}
   - component: {fileID: 945484899}
   - component: {fileID: 945484898}
+  - component: {fileID: 945484903}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &945484898
 MonoBehaviour:
@@ -1449,6 +1450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d3ec210bab0c54790137ab77176160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactive: {r: 1, g: 0.37588567, b: 0, a: 0}
+  active: {r: 0.79416883, g: 1, b: 0, a: 0}
 --- !u!65 &945484899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1480,7 +1483,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 00f2bd28723c1a042ad2a3463e744d04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1517,12 +1520,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945484897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0234375, y: -1.548, z: -2.609}
+  m_LocalPosition: {x: -6.7, y: -1.548, z: 1.75}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &945484903
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945484897}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &952050239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1691,7 @@ GameObject:
   - component: {fileID: 1051486199}
   m_Layer: 0
   m_Name: DummyPlayer/Enemy
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2749,7 +2768,6 @@ MonoBehaviour:
   angle: 93
   speed: 1
   startRotatingToRight: 1
-  spottedPauseTime: 0
   changeDirectionPauseTime: 1
   notAlternatingDirection: 1
   pauseRotation: 0
