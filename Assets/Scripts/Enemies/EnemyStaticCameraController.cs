@@ -13,7 +13,7 @@ public class EnemyStaticCameraController : MonoBehaviour
     private float currentRotation = 0f;
     [SerializeField] float speed = 2f;
     [SerializeField] bool startRotatingToRight = true;
-    [SerializeField] float spottedPauseTime = 0f;
+    //[SerializeField] float spottedPauseTime = 0f;
     [SerializeField] float changeDirectionPauseTime = 3f;
     //[SerializeField] Vector3 eulerAnglesDEBUG;
     [SerializeField] bool notAlternatingDirection;
@@ -21,7 +21,9 @@ public class EnemyStaticCameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        angle = notAlternatingDirection ? angle : angle / 2;
         angleStep = angle;
+        
         currentRotation = transform.eulerAngles.y;
         if (startRotatingToRight)
             speed = Mathf.Abs(speed);
@@ -36,12 +38,14 @@ public class EnemyStaticCameraController : MonoBehaviour
         // direction
         if (!pauseRotation)
         {
-            if (angle != 0f)
+            if (true)
             {
+
                 gameObject.transform.Rotate(new Vector3(0f, speed, 0f));
 
-                if (currentRotation >= angle && speed > 0)
+                if (currentRotation >= angle  && speed > 0)
                 {
+                    
                     if (changeDirectionPauseTime > 0f)
                     {
                         StartCoroutine(Pause(changeDirectionPauseTime));
@@ -51,8 +55,9 @@ public class EnemyStaticCameraController : MonoBehaviour
 
 
                 }
-                if (currentRotation <= 0 && speed < 0)
+                if (currentRotation <= -angle  && speed < 0)
                 {
+                    
                     if (changeDirectionPauseTime > 0f)
                     {
                         StartCoroutine(Pause(changeDirectionPauseTime));
