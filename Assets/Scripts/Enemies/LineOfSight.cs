@@ -64,7 +64,7 @@ public class LineOfSight : MonoBehaviour
             else
             {
                 //hit   
-                if (raycastHit.transform.CompareTag("Player"))
+                if (raycastHit.transform.CompareTag("Character"))
                 {
                     // gameManager.PlayerDetected();
                 }
