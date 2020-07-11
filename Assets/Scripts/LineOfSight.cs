@@ -14,8 +14,10 @@ public class LineOfSight : MonoBehaviour
     private Mesh mesh;
     private Vector3 origin;
     private float startingAngle;
-    private float fov;
     
+    [SerializeField] private float fov = 90f;
+    [SerializeField] float viewDistance = 5f;
+    [SerializeField] int rayCount = 50;
 
 
 
@@ -24,7 +26,6 @@ public class LineOfSight : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
-        fov = 90f;
     }
 
 
@@ -33,11 +34,8 @@ public class LineOfSight : MonoBehaviour
         SetAimDirection(-parent.forward);
         SetOrigin(parent.position);
 
-        int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 5f;
-
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -47,7 +45,7 @@ public class LineOfSight : MonoBehaviour
 
         int vertexIndex = 1;
         int triangleIndex = 0;
-
+        
         for (int i = 0; i <= rayCount; i++)
         {
             RaycastHit raycastHit;
@@ -97,7 +95,17 @@ public class LineOfSight : MonoBehaviour
         startingAngle = GetAngleFromFloat(aimDirection) - fov / 2f;
     }
 
+    public void SetViewDistance(float distance)
+    {
+        viewDistance = distance;
+    }
 
+    public void SetFieldOfView(float newFOV)
+    {
+        fov = newFOV;
+    }
+
+    #region formulas
     Vector3 GetVectorFromAngle(float angle)
     {
         // 0 -> 360
@@ -113,4 +121,6 @@ public class LineOfSight : MonoBehaviour
 
         return n;
     }
+    #endregion
+
 }

@@ -1626,6 +1626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1937758811}
+  fov: 90
+  viewDistance: 5
+  rayCount: 50
 --- !u!23 &1127665282
 MeshRenderer:
   m_ObjectHideFlags: 0
