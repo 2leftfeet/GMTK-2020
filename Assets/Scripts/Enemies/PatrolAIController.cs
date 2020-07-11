@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolAIController : MonoBehaviour
+public class PatrolAIController : MonoBehaviour, IAgentInput
 {
     [SerializeField] Transform[] Route;
     private int destPoint = 0;
-    private NavMeshAgent agent;
+    //private NavMeshAgent agent;
     private bool paused = false;
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
 
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
-        agent.autoBraking = false;
+        //agent.autoBraking = false;
 
-        GotoNextPoint();
+        //GotoNextPoint();
     }
 
 
-    void GotoNextPoint()
+    void GotoNextPoint(NavMeshAgent agent)
     {
         // Returns if no points have been set up
         if (Route.Length == 0)
@@ -38,25 +38,25 @@ public class PatrolAIController : MonoBehaviour
     }
 
 
-    void Update()
+    public void DoUpdate(NavMeshAgent agent)
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (!paused)
         {
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                GotoNextPoint();
+                GotoNextPoint(agent);
         }
     }
 
 
-    public void PauseRoute()
+    public void Pause(NavMeshAgent agent)
     {
         agent.SetDestination(this.transform.position);
         paused = true;
     }
 
-    public void ResumeRoute()
+    public void Resume()
     {
         paused = false;
     }

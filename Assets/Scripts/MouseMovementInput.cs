@@ -3,34 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MouseMovementInput : MonoBehaviour
+public class MouseMovementInput : MonoBehaviour, IAgentInput
 {
-    NavMeshAgent agent;
     Camera mainCamera;
+
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
         mainCamera = Camera.main;
+        //TargetPos = Vector3.zero;
     }
 
-    void Update()
+    public void DoUpdate(NavMeshAgent agent)
     {
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit hit;
-
         if(Input.GetMouseButtonDown(0))
         {
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
             if(Physics.Raycast(ray, out hit, 100))
             {
                 agent.destination = hit.point;
             }
         }
-
-        if(agent.remainingDistance < agent.stoppingDistance)
-        {
-            
-        }
     }
+
+    public void Pause(NavMeshAgent agent)
+    {
+        agent.destination = agent.gameObject.transform.position;
+    }
+
+    public void Resume()
+    {}
 }
