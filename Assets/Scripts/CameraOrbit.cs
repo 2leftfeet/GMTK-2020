@@ -11,10 +11,10 @@ public class CameraOrbit : MonoBehaviour
     
     [SerializeField] float minFov = 1f;
     [SerializeField] float maxFov = 5f;
-    float sensitivity = 0.5f;
+    float sensitivity = 1f;
  
     public static bool activeRotate = false;
-    Vector3 pivotPoint; //
+    Vector3 pivotPoint;
 
     public Transform target;
 
