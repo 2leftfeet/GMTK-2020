@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318373893468684124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1318373893954237657}
   - component: {fileID: 4701669073376659851}
   - component: {fileID: 1318373893954237651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cb59cf779b6455d94af51edc30c771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWithDefault: 1
 --- !u!114 &1318373893954237657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +184,6 @@ MonoBehaviour:
   startRotatingToRight: 1
   changeDirectionPauseTime: 3
   notAlternatingDirection: 0
-  isModel: 0
   pauseRotation: 0
 --- !u!195 &1318373893954237651
 NavMeshAgent:
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1318373894695302445}
   - component: {fileID: 1318373894695302444}
   - component: {fileID: 1318373894695302447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
