@@ -44,13 +44,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  startLevel: {fileID: 8556855958479054525, guid: 49352be10ed2816469f14b2d8cc777e4,
+    type: 3}
   levels:
-  - {fileID: 5682808284863024411, guid: f6f4121bcb11c48ccb8100c141d98988, type: 3}
-  - {fileID: 5682808284863024411, guid: f6f4121bcb11c48ccb8100c141d98988, type: 3}
-  - {fileID: 5682808284863024411, guid: f6f4121bcb11c48ccb8100c141d98988, type: 3}
-  - {fileID: 5682808284863024411, guid: f6f4121bcb11c48ccb8100c141d98988, type: 3}
-  - {fileID: 5682808284863024411, guid: f6f4121bcb11c48ccb8100c141d98988, type: 3}
-  startLevel: {fileID: 0}
-  cameraTransitionDuration: 0.5
+  - {fileID: 1242217336973495757, guid: 9df2bfdce293ef34eb30313d8307ec6f, type: 3}
+  - {fileID: 4760281198234002889, guid: c61b8a4cf6fcc83488c83cf12be77fdf, type: 3}
+  - {fileID: 5353948214300926222, guid: b321dcd342f7d33438e5914ea51c9ac1, type: 3}
   player: {fileID: 0}
-  levelSpawnDistance: 15
+  levelSpawnDistance: 60
+  cameraTransitionDuration: 1
+  playerLiftDuration: 1
+  playerLiftHeight: 2

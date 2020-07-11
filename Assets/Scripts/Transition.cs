@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Transition : MonoBehaviour
 {
+    [SerializeField] 
     public GameObject mainCamera;
     public GameObject startLevel;
     public List<GameObject> levels;
@@ -24,6 +25,7 @@ public class Transition : MonoBehaviour
     void Start()
     {
         currentLevel = startLevel;
+        currentLevel = Instantiate(currentLevel, currentLevel.transform.position, Quaternion.identity);
         initialLevelPosition = startLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
     }
