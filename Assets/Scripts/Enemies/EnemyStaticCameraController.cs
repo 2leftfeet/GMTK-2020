@@ -32,7 +32,7 @@ public class EnemyStaticCameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // eulerAnglesDEBUG = gameObject.transform.eulerAngles;
         // direction
