@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class Controllable : MonoBehaviour
 {
     NavMeshAgent agent;
+    public bool startWithDefault = true;
     public IAgentInput defaultInput;
     
     public IAgentInput input;
@@ -16,7 +17,8 @@ public class Controllable : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         defaultInput = GetComponent<IAgentInput>();
-        input = defaultInput;
+        if(startWithDefault)
+            input = defaultInput;
     }
 
     void Update()
