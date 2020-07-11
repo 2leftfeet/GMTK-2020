@@ -11,7 +11,9 @@ public class LogicDoorController : MonoBehaviour
 
     int totalActive = 0;
     int totalPlates;
+    [SerializeField]
     string animationToOpen = "";
+    [SerializeField]
     string animationToClose = "";
     Animator animation;
     bool hasToBeHeld = false;
