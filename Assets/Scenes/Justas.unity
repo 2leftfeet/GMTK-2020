@@ -175,7 +175,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-26970
+  m_Name: pb_Mesh34850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -420,7 +420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145164643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.05, y: 0.44, z: 0.05}
+  m_LocalPosition: {x: 1.05, y: -0.18, z: 0.05}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -545,6 +545,28 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1145164643}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levelSpawnDistance
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[1]
+      value: 
+      objectReference: {fileID: 5682808284863024411, guid: 6dcd0466bede64c698d27c09e0453be7,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[3]
+      value: 
+      objectReference: {fileID: 5682808284863024411, guid: 6dcd0466bede64c698d27c09e0453be7,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: cameraTransitionDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,6 +637,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3898955841978063213, guid: f6f4121bcb11c48ccb8100c141d98988,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898955841978063213, guid: f6f4121bcb11c48ccb8100c141d98988,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5682808284863024400, guid: f6f4121bcb11c48ccb8100c141d98988,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,6 +707,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 644108544}
+    - target: {fileID: 5682808284863024404, guid: f6f4121bcb11c48ccb8100c141d98988,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682808284863024404, guid: f6f4121bcb11c48ccb8100c141d98988,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5682808284863024407, guid: f6f4121bcb11c48ccb8100c141d98988,
         type: 3}
       propertyPath: m_Mesh
