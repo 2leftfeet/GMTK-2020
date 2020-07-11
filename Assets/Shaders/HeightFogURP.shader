@@ -1,8 +1,4 @@
-﻿﻿// When creating shaders for Lightweight Render Pipeline you can use the ShaderGraph which is super AWESOME!
-// However, if you want to author shaders in shading language you can use this template as a base.
-// Please note, this shader does not match performance of the built-in URP Lit shader.
-// This shader works with URP 7.4.X preview version
-Shader "SKGames/Height Fog (URP 7.4.X)"
+﻿﻿Shader "Rokas Fog"
 {
     Properties
     {
