@@ -8,18 +8,32 @@ using UnityEngine.AI;
 public class Controllable : MonoBehaviour
 {
     NavMeshAgent agent;
+    public IAgentInput defaultInput;
+    
     public IAgentInput input;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        defaultInput = GetComponent<IAgentInput>();
+        input = defaultInput;
     }
 
     void Update()
     {
         if(input != null)
         {
-            agent.destination = input.TargetPos;
+            input.DoUpdate(agent);
         }
+    }
+
+    public void PauseInput()
+    {
+        input.Pause(agent);
+    }
+
+    public void ResumeInput()
+    {
+        input.Resume();
     }
 }

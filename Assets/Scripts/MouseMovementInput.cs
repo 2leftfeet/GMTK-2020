@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MouseMovementInput : MonoBehaviour, IAgentInput
 {
     Camera mainCamera;
 
-    public Vector3 TargetPos {get; private set;}
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class MouseMovementInput : MonoBehaviour, IAgentInput
         //TargetPos = Vector3.zero;
     }
 
-    void Update()
+    public void DoUpdate(NavMeshAgent agent)
     {
         if(Input.GetMouseButtonDown(0))
         {
@@ -22,13 +22,16 @@ public class MouseMovementInput : MonoBehaviour, IAgentInput
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, 100))
             {
-                TargetPos = hit.point;
+                agent.destination = hit.point;
             }
         }
     }
 
-    public void ResetTargetPos(Vector3 basePos)
+    public void Pause(NavMeshAgent agent)
     {
-        TargetPos = basePos;
+        agent.destination = agent.gameObject.transform.position;
     }
+
+    public void Resume()
+    {}
 }

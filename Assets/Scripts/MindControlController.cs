@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public interface IAgentInput
 {
-    Vector3 TargetPos{ get;}
-    void ResetTargetPos(Vector3 basePos);
+    void DoUpdate(NavMeshAgent agent);
+
+    void Pause(NavMeshAgent agent);
+    void Resume();
 }
 
 public class MindControlController : MonoBehaviour
@@ -25,7 +27,7 @@ public class MindControlController : MonoBehaviour
 
         currentAgent = startAgent;
         currentAgent.input = input;
-        input.ResetTargetPos(currentAgent.transform.position);
+        //currentAgent.defaultInput = input;
     }
 
     void Update()
@@ -39,10 +41,11 @@ public class MindControlController : MonoBehaviour
                 var potentialAgent = hit.collider.gameObject.GetComponent<Controllable>();
                 if(potentialAgent != null && potentialAgent != currentAgent)
                 {
-                    currentAgent.input = null;
+                    currentAgent.input = currentAgent.defaultInput;
+                    currentAgent.ResumeInput();
                     currentAgent = potentialAgent;
+                    currentAgent.PauseInput();
                     currentAgent.input = input;
-                    input.ResetTargetPos(currentAgent.transform.position);
                 }
             }
         }
