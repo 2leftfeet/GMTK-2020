@@ -54,10 +54,7 @@ public class LineOfSight : MonoBehaviour
 
             Physics.Raycast(origin, GetVectorFromAngle(angle), out raycastHit, viewDistance);
 
-            if (raycastHit.transform.CompareTag("Player"))
-            {
-                // gameManager.PlayerDetected();
-            }
+           
 
             if (raycastHit.collider == null)
             {
@@ -67,6 +64,10 @@ public class LineOfSight : MonoBehaviour
             else
             {
                 //hit   
+                if (raycastHit.transform.CompareTag("Player"))
+                {
+                    // gameManager.PlayerDetected();
+                }
                 vertex = raycastHit.point;
             }
             vertices[vertexIndex] = vertex;
