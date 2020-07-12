@@ -16,8 +16,8 @@ public class PressurePlateController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("Character"))
+
+        if (other.CompareTag("Character") || other.CompareTag("Player"))
         {
             
             mesh.material.SetColor("_BaseColor",active);
@@ -29,7 +29,7 @@ public class PressurePlateController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Character") || other.CompareTag("Player"))
         {
             mesh.material.SetColor("_BaseColor", inactive);
             mesh.material.SetColor("_EmissionColor", inactive);

@@ -59,11 +59,37 @@ public class Transition : MonoBehaviour
         }
     }
 
+    public void RestartLevel()
+    {
+        if (!initiated)
+        {
+            cameraOrbitScript.enabled = false;
+            initiated = true;
+            Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
+            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+
+            //If the child was found.
+            if (spawnPoint != null)
+            {
+                //levelCounter++;
+                coroutine = MoveLevel(currentLevel, nextLevel, spawnPoint);
+                StartCoroutine(coroutine);
+
+                currentLevel = nextLevel;
+            }
+            else {
+                Debug.Log("Cannot find spawn point in Level " + levelCounter);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("space")){
-            TransitionLevel();
+            //TransitionLevel();
+            RestartLevel();
         }
     }
     IEnumerator MoveLevel(GameObject deactivateLevel, GameObject moveLevelToIdentity, GameObject playerSpawnPoint)
