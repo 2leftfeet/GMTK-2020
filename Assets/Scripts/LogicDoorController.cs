@@ -11,12 +11,24 @@ public class LogicDoorController : MonoBehaviour
 
     int totalActive = 0;
     int totalPlates;
+
     [SerializeField]
     string animationToOpen = "";
     [SerializeField]
     string animationToClose = "";
+
     Animator animation;
+
+    [SerializeField]
     bool hasToBeHeld = false;
+
+    [SerializeField]
+    bool doesReset = false;
+
+    [SerializeField]
+    float resetTimer = 1f;
+    bool activated = false;
+    bool activeCounter = false;
 
     private void Awake()
     {
@@ -36,10 +48,17 @@ public class LogicDoorController : MonoBehaviour
         if(totalActive == totalPlates)
         {
             animation.SetTrigger(animationToOpen);
+            activated = true;
+            if (doesReset && !activeCounter)
+            {
+                activeCounter = true;
+                StartCoroutine(ResetTimer(resetTimer));
+            }
         }
         else if (hasToBeHeld)
         {
             animation.SetTrigger(animationToClose);
+            activated = false;
         }
     }
 
@@ -53,4 +72,18 @@ public class LogicDoorController : MonoBehaviour
         totalActive--;
     }
 
+    IEnumerator ResetTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        if (totalActive != totalPlates)
+        {
+            activated = false;
+            animation.SetTrigger(animationToClose);
+        }
+        else
+        {
+            ResetTimer(time);
+        }
+        activeCounter = false;
+    }
 }
