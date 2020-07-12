@@ -23,6 +23,9 @@ public class LogicDoorController : MonoBehaviour
     bool doesReset = false;
 
     [SerializeField]
+    bool useTimer = true;
+
+    [SerializeField]
     float resetTimer = 1f;
     bool activated = false;
     bool activeCounter = false;
@@ -44,13 +47,22 @@ public class LogicDoorController : MonoBehaviour
     {
         if(totalActive == totalPlates)
         {
-            animation.SetTrigger(animationToOpen);
+            if(!activated) animation.SetTrigger(animationToOpen);
             activated = true;
-            if (doesReset && !activeCounter)
+            if(useTimer)
             {
-                activeCounter = true;
-                StartCoroutine(ResetTimer(resetTimer));
+                if (doesReset && !activeCounter)
+                {
+                    activeCounter = true;
+                    StartCoroutine(ResetTimer(resetTimer));
+                }
             }
+        }
+
+        if(!useTimer && totalActive != totalPlates && activated)
+        {
+            animation.SetTrigger(animationToClose);
+            activated = false;
         }
     }
 

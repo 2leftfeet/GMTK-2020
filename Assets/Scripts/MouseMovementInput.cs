@@ -35,6 +35,6 @@ public class MouseMovementInput : MonoBehaviour, IAgentInput
         agent.destination = agent.gameObject.transform.position;
     }
 
-    public void Resume()
+    public void Resume(NavMeshAgent agent)
     {}
 }

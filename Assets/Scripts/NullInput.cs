@@ -10,8 +10,12 @@ public class NullInput : MonoBehaviour, IAgentInput
     {}
 
     public void Pause(NavMeshAgent agent)
-    {}
+    {
+        
+    }
 
-    public void Resume()
-    {}
+    public void Resume(NavMeshAgent agent)
+    {
+        agent.destination = agent.transform.position;
+    }
 }

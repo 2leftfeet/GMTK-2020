@@ -122,6 +122,7 @@ public class Transition : MonoBehaviour
         moveLevelToIdentity.transform.position = initialLevelPosition;
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x-levelSpawnDistance, mainCamera.transform.position.y, mainCamera.transform.position.z);
         player.transform.position = new Vector3(player.transform.position.x-levelSpawnDistance, player.transform.position.y, player.transform.position.z);
+        NavMesh.AddNavMeshData(new NavMeshData());
 
         //Move player down
         playerNewPosition = new Vector3(player.transform.position.x, player.transform.position.y - playerLiftHeight, player.transform.position.z);

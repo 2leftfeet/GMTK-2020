@@ -60,9 +60,10 @@ public class PatrolAIController : MonoBehaviour, IAgentInput
         paused = true;
     }
 
-    public void Resume()
+    public void Resume(NavMeshAgent agent)
     {
         paused = false;
+        GotoNextPoint(agent);
     }
 
 

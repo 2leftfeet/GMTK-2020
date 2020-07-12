@@ -84,6 +84,8 @@ public class LineOfSight : MonoBehaviour
             angle -= angleIncrease;
         }
 
+        mesh.RecalculateBounds();
+
         for (int i = 0; i < vertices.Length; i++)
         {
             Vector3 rotetedVertex = parent.transform.rotation * vertices[i];
