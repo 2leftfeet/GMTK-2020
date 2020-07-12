@@ -22,6 +22,8 @@ public class Transition : MonoBehaviour
     int levelCounter = 0;
     CameraOrbit cameraOrbitScript;
 
+    MindControlController mind;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class Transition : MonoBehaviour
         levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
+        mind = FindObjectOfType<MindControlController>();
     }
 
     public void TransitionLevel() {
@@ -63,6 +66,8 @@ public class Transition : MonoBehaviour
     {
         if (!initiated)
         {
+            mind.NewAgent(mind.startAgent);
+
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
