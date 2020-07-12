@@ -88,7 +88,7 @@ public class LineOfSight : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-            Vector3 rotetedVertex = parent.transform.rotation * vertices[i];
+            Vector3 rotetedVertex =  vertices[i];
             uv[i] = new Vector2(rotetedVertex.x / textureTileSize, rotetedVertex.z / textureTileSize);
         }
 
