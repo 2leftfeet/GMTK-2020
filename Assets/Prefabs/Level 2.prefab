@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NavMeshData: {fileID: 23800000, guid: 79419137c5d676c45aeb8c0edf6016b5, type: 2}
+  dontcreate: 0
 --- !u!114 &8496308595481305280
 MonoBehaviour:
   m_ObjectHideFlags: 0

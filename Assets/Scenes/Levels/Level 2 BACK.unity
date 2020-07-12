@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 79419137c5d676c45aeb8c0edf6016b5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 94da9f683dc487d41b72971070996e3e, type: 2}
 --- !u!1 &396707531
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-772108
+  m_Name: pb_Mesh-2215260
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -465,7 +465,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-772094
+  m_Name: pb_Mesh-2215272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -652,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 8556855958479054522, guid: 49352be10ed2816469f14b2d8cc777e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.26
+      value: -2.96
       objectReference: {fileID: 0}
     - target: {fileID: 8556855958479054522, guid: 49352be10ed2816469f14b2d8cc777e4,
         type: 3}
