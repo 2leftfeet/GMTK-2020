@@ -8,6 +8,8 @@ public class EnemyStaticCameraController : MonoBehaviour
     [Header("Turning settings")]
     [Range(0, 360)]
     float angle = 90f;
+    float angleR;
+    float angleL;
     float angleStep;
 
     private float currentRotation = 0f;
@@ -21,10 +23,13 @@ public class EnemyStaticCameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentRotation = transform.eulerAngles.y;
         angle = notAlternatingDirection ? angle : angle / 2;
         angleStep = angle;
-        
-        currentRotation = transform.eulerAngles.y;
+        angleR = angle + currentRotation;
+        angleL = angle - currentRotation;
+
+
         if (startRotatingToRight)
             speed = Mathf.Abs(speed);
         else
@@ -43,7 +48,7 @@ public class EnemyStaticCameraController : MonoBehaviour
 
                 gameObject.transform.Rotate(new Vector3(0f, speed, 0f));
 
-                if (currentRotation >= angle  && speed > 0)
+                if (currentRotation >= angleR && speed > 0)
                 {
                     
                     if (changeDirectionPauseTime > 0f)
@@ -55,7 +60,7 @@ public class EnemyStaticCameraController : MonoBehaviour
 
 
                 }
-                if (currentRotation <= -angle  && speed < 0)
+                if (currentRotation <= -angleL && speed < 0)
                 {
                     
                     if (changeDirectionPauseTime > 0f)
@@ -77,7 +82,8 @@ public class EnemyStaticCameraController : MonoBehaviour
         yield return new WaitForSeconds(time);
         if (notAlternatingDirection)
         {
-            angle += angleStep;
+            angleR += angleStep;
+            angleL += angleStep;
             speed = temp;
         }
         else
