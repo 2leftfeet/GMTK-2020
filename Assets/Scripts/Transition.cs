@@ -16,7 +16,7 @@ public class Transition : MonoBehaviour
     public float playerLiftDuration = 1f;
     public float playerLiftHeight = 2f;
     private IEnumerator coroutine;
-    GameObject currentLevel;
+    public GameObject currentLevel;
     Vector3 initialLevelPosition;
     bool initiated = false;
     int levelCounter = 0;
@@ -28,8 +28,8 @@ public class Transition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
-        levelCounter++;
+        //currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
+        //levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
         mind = FindObjectOfType<MindControlController>();
