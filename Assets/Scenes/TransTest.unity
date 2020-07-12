@@ -122,52 +122,8 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &778397128
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778397131}
-  - component: {fileID: 778397130}
-  - component: {fileID: 778397129}
-  m_Layer: 0
-  m_Name: MindControlManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &778397129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778397128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 904990c9781e9f74e90a22f8f25b5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &778397130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778397128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769f6760924d540aebe932c0ad3c7651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startAgent: {fileID: 867679312}
-  currentAgent: {fileID: 0}
---- !u!4 &778397131
-Transform:
+--- !u!1001 &305712625
+PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -216,7 +172,7 @@ Transform:
     - target: {fileID: 8833914542693193181, guid: 6998a00ee3cb8a04e98f60342dca30f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8833914542693193181, guid: 6998a00ee3cb8a04e98f60342dca30f1,
         type: 3}
@@ -236,7 +192,7 @@ Transform:
     - target: {fileID: 8833914542693193182, guid: 6998a00ee3cb8a04e98f60342dca30f1,
         type: 3}
       propertyPath: m_Name
-      value: MindControlManager (1)
+      value: MindControlManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6998a00ee3cb8a04e98f60342dca30f1, type: 3}
@@ -290,7 +246,7 @@ PrefabInstance:
     - target: {fileID: 6357423929256960291, guid: 45fad82c58da8fc4e90823fc5c184dd8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6357423929256960291, guid: 45fad82c58da8fc4e90823fc5c184dd8,
         type: 3}
@@ -468,7 +424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 2
   minFov: 1
-  maxFov: 5
+  maxFov: 7
+  zoomSensitivity: 2
   target: {fileID: 1106989095}
 --- !u!114 &928629036
 MonoBehaviour:
@@ -536,7 +493,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -564,7 +521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &1106989094
 GameObject:
@@ -594,7 +551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1146451979
 PrefabInstance:
@@ -709,7 +666,7 @@ PrefabInstance:
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
@@ -774,7 +731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736961371
 GameObject:
@@ -866,5 +823,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 63.759003, y: -130.311, z: -109.226006}
