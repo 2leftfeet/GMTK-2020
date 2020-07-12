@@ -21,6 +21,7 @@ public class Transition : MonoBehaviour
     bool initiated = false;
     int levelCounter = 0;
     CameraOrbit cameraOrbitScript;
+    [SerializeField] GameObject victory;
 
     MindControlController mind;
     ClickIndicator indicator;
@@ -63,7 +64,7 @@ public class Transition : MonoBehaviour
                 currentLevel = nextLevel;
             }
             else {
-                Debug.Log("Cannot find spawn point in Level " + levelCounter);
+                victory.SetActive(true);
             }
         }
     }
