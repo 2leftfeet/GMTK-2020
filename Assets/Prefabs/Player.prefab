@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6357423929256960303}
   - component: {fileID: 6357423929256960301}
   - component: {fileID: 6357423929256960302}
-  - component: {fileID: 1928550807}
+  - component: {fileID: 1454861062}
   m_Layer: 8
   m_Name: Player
   m_TagString: Character
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startWithDefault: 0
---- !u!114 &1928550807
+--- !u!114 &1454861062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6357423929256960300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437ea5a955f3ec04f9ae74f6b4d71ebb, type: 3}
+  m_Script: {fileID: 11500000, guid: ec1a719847c109b43a2d0b228db3add7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 2588245053585244742, guid: 3d1f0b47ba2066a43bc8fff320893fb4,
-    type: 3}
+  bobbingFrequency: 10
+  bobbingMagnitude: 0.5
