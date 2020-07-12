@@ -12,12 +12,7 @@ public class PressurePlateController : MonoBehaviour
     [SerializeField] Color active;
     
 
-    MeshRenderer mesh;
-
-    private void Awake()
-    {
-        mesh = GetComponent<MeshRenderer>();
-    }
+    [SerializeField] MeshRenderer mesh;
 
     private void OnTriggerEnter(Collider other)
     {
