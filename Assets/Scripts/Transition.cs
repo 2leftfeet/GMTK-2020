@@ -31,7 +31,7 @@ public class Transition : MonoBehaviour
     {
         //currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
         //levelCounter++;
-        initialLevelPosition = currentLevel.transform.position;
+        initialLevelPosition = new Vector3(currentLevel.transform.position.x, currentLevel.transform.position.y+0.3f, currentLevel.transform.position.z);
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
         mind = FindObjectOfType<MindControlController>();
         indicator = mind.GetComponent<ClickIndicator>();
