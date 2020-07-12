@@ -7,7 +7,7 @@ public class Transition : MonoBehaviour
 {
     [SerializeField] 
     public GameObject mainCamera;
-    public GameObject startLevel;
+    //public GameObject startLevel;
     public List<GameObject> levels;
     public GameObject player;
     //How far the other level is spawned (to not see other levels during transitions)
@@ -25,8 +25,8 @@ public class Transition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = levels[0];
-        currentLevel = Instantiate(currentLevel, currentLevel.transform.position, Quaternion.identity);
+        currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
+        levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
     }
@@ -34,11 +34,15 @@ public class Transition : MonoBehaviour
     public void TransitionLevel() {
         if (!initiated)
         {
+            if(levelCounter == levels.Count) {
+                Debug.Log("No more levels, initiate ending scene");
+                return;
+            }
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
-            GameObject nextLevel = Instantiate(levels[levelCounter+1], instantiatePosition,Quaternion.identity);
-            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("TeleporterStart").gameObject; //Finding spawn point for next level
 
             //If the child was found.
             if (spawnPoint != null)
