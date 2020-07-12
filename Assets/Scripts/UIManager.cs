@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     Animator Title;
 
     [SerializeField] Animator Controls;
+    [SerializeField] GameObject ControlsGO;
     [SerializeField] ToggleMeniuCamera ToggleMeniuCamera;
 
     bool isStillIntro = false;
@@ -46,6 +47,7 @@ public class UIManager : MonoBehaviour
         StartButton.SetTrigger("hide");
         ExitButton.SetTrigger("hide");
         Title.SetTrigger("hide");
+        ControlsGO.SetActive(true);
         Controls.SetTrigger("show");
     }
 
