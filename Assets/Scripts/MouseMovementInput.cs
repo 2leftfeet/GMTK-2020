@@ -6,11 +6,13 @@ using UnityEngine.AI;
 public class MouseMovementInput : MonoBehaviour, IAgentInput
 {
     Camera mainCamera;
+    ClickIndicator clickIndicator;
 
 
     void Start()
     {
         mainCamera = Camera.main;
+        clickIndicator = GetComponent<ClickIndicator>();
         //TargetPos = Vector3.zero;
     }
 
@@ -23,6 +25,7 @@ public class MouseMovementInput : MonoBehaviour, IAgentInput
             if(Physics.Raycast(ray, out hit, 100))
             {
                 agent.destination = hit.point;
+                clickIndicator.UpdateDestination(agent);
             }
         }
     }

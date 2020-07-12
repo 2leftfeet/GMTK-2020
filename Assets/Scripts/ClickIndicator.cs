@@ -3,27 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class ClickIndicator : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
-    NavMeshAgent agent;
     Vector3 destination;
-    public IAgentInput input;
 
-    void Start()
+    public void UpdateDestination(NavMeshAgent agent)
     {
-        agent = GetComponent<NavMeshAgent>();
-    }
-
-    void Update()
-    {
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            destination = agent.destination;
-            SpawnIndicator();
-        }
+        destination = agent.destination;
+        SpawnIndicator();
     }
 
     void SpawnIndicator()
