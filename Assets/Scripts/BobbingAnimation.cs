@@ -7,6 +7,7 @@ public class BobbingAnimation : MonoBehaviour
 {
     [SerializeField] float bobbingFrequency = 1.0f;
     [SerializeField] float bobbingMagnitude = 1.0f; 
+    [SerializeField] Transform stationaryPoint;
 
     float bobbingFrequencyOffset;
     float bobbingOffset;
@@ -29,7 +30,7 @@ public class BobbingAnimation : MonoBehaviour
             hasReset = false;
 
             bobbingOffset = Mathf.Abs(Mathf.Sin(Time.time * bobbingFrequency + bobbingFrequencyOffset)) * bobbingMagnitude;
-            agent.baseOffset += bobbingOffset - oldBobbingOffset; 
+            agent.baseOffset += bobbingOffset - oldBobbingOffset;
             oldBobbingOffset = bobbingOffset;
         }
         else
@@ -37,7 +38,7 @@ public class BobbingAnimation : MonoBehaviour
             if(!hasReset)
             {
                 agent.baseOffset -= oldBobbingOffset;
-                transform.rotation = Quaternion.identity;
+                //transform.rotation = Quaternion.identity;
                 hasReset = true;
                 oldBobbingOffset = 0.0f;
             }

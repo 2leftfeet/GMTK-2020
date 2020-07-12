@@ -25,9 +25,9 @@ public class Transition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = startLevel;
+        currentLevel = levels[0];
         currentLevel = Instantiate(currentLevel, currentLevel.transform.position, Quaternion.identity);
-        initialLevelPosition = startLevel.transform.position;
+        initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
     }
 
@@ -37,7 +37,7 @@ public class Transition : MonoBehaviour
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
-            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
+            GameObject nextLevel = Instantiate(levels[levelCounter+1], instantiatePosition,Quaternion.identity);
             GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
 
             //If the child was found.
@@ -55,11 +55,37 @@ public class Transition : MonoBehaviour
         }
     }
 
+    public void RestartLevel()
+    {
+        if (!initiated)
+        {
+            cameraOrbitScript.enabled = false;
+            initiated = true;
+            Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
+            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+
+            //If the child was found.
+            if (spawnPoint != null)
+            {
+                //levelCounter++;
+                coroutine = MoveLevel(currentLevel, nextLevel, spawnPoint);
+                StartCoroutine(coroutine);
+
+                currentLevel = nextLevel;
+            }
+            else {
+                Debug.Log("Cannot find spawn point in Level " + levelCounter);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("space")){
-            TransitionLevel();
+            //TransitionLevel();
+            RestartLevel();
         }
     }
     IEnumerator MoveLevel(GameObject deactivateLevel, GameObject moveLevelToIdentity, GameObject playerSpawnPoint)
