@@ -17,17 +17,21 @@ public class CameraOrbit : MonoBehaviour
     Vector3 pivotPoint;
 
     public Transform target;
+    Vector3 camLocalEulerAngles;
 
     Camera cam;
 
     void Start()
     {
         cam = Camera.main;
+        //camLocalEulerAngles = transform.localEulerAngles;
+        camLocalEulerAngles.x = 45;
         pivotPoint = new Vector3(target.position.x, target.position.y, target.position.z);
     }
  
     private void Update()
     {
+        //camLocalEulerAngles.x = 45;
         mouseDelta = lastMouse - currentMouse;
  
         if (Input.GetMouseButtonDown(2))
@@ -57,7 +61,7 @@ public class CameraOrbit : MonoBehaviour
         if (activeRotate)
         {
             transform.RotateAround(pivotPoint, Vector3.up, mouseDelta.x * -.1f * multiplier);
-            transform.RotateAround(pivotPoint, transform.right, mouseDelta.y * .1f * multiplier);
+            //transform.RotateAround(pivotPoint, transform.right, mouseDelta.y * .1f * multiplier);
         }
  
         lastMouse = Input.mousePosition;
