@@ -122,8 +122,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &139712322
-PrefabInstance:
+--- !u!1 &778397128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 778397131}
+  - component: {fileID: 778397130}
+  - component: {fileID: 778397129}
+  m_Layer: 0
+  m_Name: MindControlManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &778397129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778397128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904990c9781e9f74e90a22f8f25b5070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &778397130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778397128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769f6760924d540aebe932c0ad3c7651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startAgent: {fileID: 867679312}
+  currentAgent: {fileID: 0}
+--- !u!4 &778397131
+Transform:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -567,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: levels.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
@@ -605,9 +649,28 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
-      propertyPath: levelSpawnDistance
-      value: 60
-      objectReference: {fileID: 0}
+      propertyPath: levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 961020895269404577, guid: 2930a3df37e8b684ca7d383fee8920d2,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[5]
+      value: 
+      objectReference: {fileID: 7446099831772643024, guid: 5161ce56373b28d40b7a877f7672eafe,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[6]
+      value: 
+      objectReference: {fileID: 4447280281533825129, guid: 749786c12e983644882812995b42d48e,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[7]
+      value: 
+      objectReference: {fileID: 961020895269404577, guid: 2930a3df37e8b684ca7d383fee8920d2,
+        type: 3}
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: m_LocalPosition.x
