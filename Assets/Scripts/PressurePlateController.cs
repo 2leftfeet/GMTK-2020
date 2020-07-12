@@ -21,7 +21,7 @@ public class PressurePlateController : MonoBehaviour
         {
             
             mesh.material.SetColor("_BaseColor",active);
-            mesh.material.SetColor("_EmmisionColor",active);
+            mesh.material.SetColor("_EmissionColor",active);
             transform.Translate(new Vector3(0f, -0.05f, 0f));
             onActivate();
         }
@@ -32,7 +32,7 @@ public class PressurePlateController : MonoBehaviour
         if (other.CompareTag("Character"))
         {
             mesh.material.SetColor("_BaseColor", inactive);
-            mesh.material.SetColor("_EmmisionColor", inactive);
+            mesh.material.SetColor("_EmissionColor", inactive);
             transform.Translate(new Vector3(0f, 0.05f, 0f));
             onDeactivate();
         }
