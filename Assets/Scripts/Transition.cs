@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Transition : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class Transition : MonoBehaviour
     }
     IEnumerator MoveLevel(GameObject deactivateLevel, GameObject moveLevelToIdentity, GameObject playerSpawnPoint)
     {
+        player.GetComponent<NavMeshAgent>().enabled = false;
         //Lift player up
         Vector3 playerNewPosition = new Vector3(player.transform.position.x, player.transform.position.y + playerLiftHeight, player.transform.position.z);
         float elapsedTime = 0;
@@ -104,5 +106,6 @@ public class Transition : MonoBehaviour
         cameraOrbitScript.enabled = true;
         initiated = false;
         yield return null;
+        player.GetComponent<NavMeshAgent>().enabled = true;
     }
 }
