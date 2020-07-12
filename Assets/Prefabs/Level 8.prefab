@@ -6470,6 +6470,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4236534619504551640}
     m_Modifications:
+    - target: {fileID: 737635601, guid: b7d16f2271fdc1048ba7422cca1db5a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737635601, guid: b7d16f2271fdc1048ba7422cca1db5a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737635601, guid: b7d16f2271fdc1048ba7422cca1db5a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737635601, guid: b7d16f2271fdc1048ba7422cca1db5a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 737635601, guid: b7d16f2271fdc1048ba7422cca1db5a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumColorKeys
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1318373893954237650, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
       propertyPath: m_LocalPosition.x

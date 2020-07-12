@@ -16,13 +16,13 @@ public class LevelManager : MonoBehaviour
 
     
 
-    void RestartLevel()
+    public void RestartLevel()
     {
-
+        transitionManager.RestartLevel();
     }
 
-    void LoadNextLevel()
+    public void LoadNextLevel()
     {
-
+        transitionManager.TransitionLevel();
     }
 }

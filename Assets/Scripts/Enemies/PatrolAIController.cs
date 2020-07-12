@@ -20,6 +20,7 @@ public class PatrolAIController : MonoBehaviour, IAgentInput
         //agent.autoBraking = false;
 
         //GotoNextPoint();
+
     }
 
 
@@ -52,6 +53,9 @@ public class PatrolAIController : MonoBehaviour, IAgentInput
 
     public void Pause(NavMeshAgent agent)
     {
+        destPoint = (destPoint - 1);
+        if(destPoint == -1) destPoint = Route.Length - 1;
+
         agent.SetDestination(this.transform.position);
         paused = true;
     }
