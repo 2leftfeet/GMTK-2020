@@ -20,9 +20,6 @@ public class LogicDoorController : MonoBehaviour
     Animator animation;
 
     [SerializeField]
-    bool hasToBeHeld = false;
-
-    [SerializeField]
     bool doesReset = false;
 
     [SerializeField]
@@ -54,11 +51,6 @@ public class LogicDoorController : MonoBehaviour
                 activeCounter = true;
                 StartCoroutine(ResetTimer(resetTimer));
             }
-        }
-        else if (hasToBeHeld)
-        {
-            animation.SetTrigger(animationToClose);
-            activated = false;
         }
     }
 
