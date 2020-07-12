@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4417072, g: 0.49061215, b: 0.5705969, a: 1}
+  m_IndirectSpecularColor: {r: 0.441707, g: 0.4906121, b: 0.5705961, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -568,21 +568,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionManager
       objectReference: {fileID: 0}
-    - target: {fileID: 175220092199190217, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 175220092199190217, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: levels.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: mainCamera
@@ -590,37 +575,9 @@ PrefabInstance:
       objectReference: {fileID: 8292910732318113087}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
-      propertyPath: startLevel
-      value: 
-      objectReference: {fileID: 8556855958479054525, guid: 49352be10ed2816469f14b2d8cc777e4,
-        type: 3}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1402178644}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: levelSpawnDistance
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: levels.Array.data[1]
-      value: 
-      objectReference: {fileID: 4760281198234002889, guid: c61b8a4cf6fcc83488c83cf12be77fdf,
-        type: 3}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: levels.Array.data[3]
-      value: 
-      objectReference: {fileID: 5682808284863024411, guid: 6dcd0466bede64c698d27c09e0453be7,
-        type: 3}
-    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
-        type: 3}
-      propertyPath: cameraTransitionDuration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: m_LocalPosition.x
