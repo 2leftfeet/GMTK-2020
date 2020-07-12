@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     Animator ExitButton;
     [SerializeField]
     Animator Title;
+
+    [SerializeField] Animator Controls;
     [SerializeField] ToggleMeniuCamera ToggleMeniuCamera;
 
     bool isStillIntro = false;
@@ -44,6 +46,7 @@ public class UIManager : MonoBehaviour
         StartButton.SetTrigger("hide");
         ExitButton.SetTrigger("hide");
         Title.SetTrigger("hide");
+        Controls.SetTrigger("show");
     }
 
 

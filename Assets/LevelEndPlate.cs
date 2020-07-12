@@ -12,7 +12,7 @@ public class LevelEndPlate : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            transform.Translate(new Vector3(0f, -0.05f, 0f));
+            //transform.Translate(new Vector3(0f, 0, -0.05f));
             transitionManager.TransitionLevel();
         }
     }
