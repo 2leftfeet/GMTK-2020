@@ -11,7 +11,7 @@ public class CameraOrbit : MonoBehaviour
     
     [SerializeField] float minFov = 1f;
     [SerializeField] float maxFov = 5f;
-    float sensitivity = 1f;
+    [SerializeField] float zoomSensitivity = 2f;
  
     public static bool activeRotate = false;
     Vector3 pivotPoint;
@@ -50,7 +50,7 @@ public class CameraOrbit : MonoBehaviour
         mouseDelta = lastMouse - currentMouse;
 
         float fov = cam.orthographicSize;
-        fov += Input.GetAxis("Mouse ScrollWheel") * -sensitivity;
+        fov += Input.GetAxis("Mouse ScrollWheel") * -zoomSensitivity;
         fov = Mathf.Clamp(fov, minFov, maxFov);
         cam.orthographicSize = fov;
     }
