@@ -7,7 +7,6 @@ public class BobbingAnimation : MonoBehaviour
 {
     [SerializeField] float bobbingFrequency = 1.0f;
     [SerializeField] float bobbingMagnitude = 1.0f; 
-    [SerializeField] Transform stationaryPoint;
 
     float bobbingFrequencyOffset;
     float bobbingOffset;

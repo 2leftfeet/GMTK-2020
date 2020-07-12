@@ -4766,6 +4766,8 @@ GameObject:
   - component: {fileID: 5156226992818994295}
   - component: {fileID: 6947486770180212925}
   - component: {fileID: 1240035967582672040}
+  - component: {fileID: 3963245314020926064}
+  - component: {fileID: 6511389868020544818}
   m_Layer: 0
   m_Name: TeleporterEnd
   m_TagString: Untagged
@@ -4843,8 +4845,37 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8893081047265110376}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.015368749, y: 0.015368753, z: 0.0023822254}
   m_Center: {x: 0, y: 0, z: 0.0005534015}
+--- !u!54 &3963245314020926064
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893081047265110376}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6511389868020544818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893081047265110376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1d06c06709a410d820c76830603adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionManager: {fileID: 0}
