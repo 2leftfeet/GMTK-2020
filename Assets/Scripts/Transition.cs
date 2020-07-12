@@ -104,7 +104,7 @@ public class Transition : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")){
-            TransitionLevel();
+            //TransitionLevel();
             //RestartLevel();
         }
     }
