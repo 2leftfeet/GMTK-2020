@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CatenaryCurve : MonoBehaviour
 {
-    [SerializeField] Transform point1;
-    [SerializeField] Transform point2;
+    [SerializeField] Transform connectPoint;
+    [SerializeField] Vector3 offset;
 
     [SerializeField] float slack;
     [SerializeField] int pointCount;
     List<Vector3> points;
 
     LineRenderer lineRenderer;
+    float startHeight;
 
     float Asinh(float f)
     {
@@ -78,15 +79,27 @@ public class CatenaryCurve : MonoBehaviour
     {
         points = new List<Vector3>(pointCount);
         lineRenderer = GetComponent<LineRenderer>();
+        startHeight = connectPoint.position.y;
         
     }
 
     void Update()
     {
+        Vector3 startPos = connectPoint.position + (connectPoint.rotation * offset);
+        startPos = new Vector3(startPos.x, startHeight + offset.y, startPos.z);
 
-        points = GetPoints(point1.position, point2.position, slack, pointCount);
+        points = GetPoints(startPos, connectPoint.position, slack, pointCount);
+        for(int i = 0; i < points.Count; i++)
+        {
+            points[i] -= transform.position;
+        }
         lineRenderer.positionCount = points.Count;
         lineRenderer.SetPositions(points.ToArray());
+    }
+
+    void LateUpdate()
+    {
+        transform.rotation = Quaternion.identity;
     }
 
     
