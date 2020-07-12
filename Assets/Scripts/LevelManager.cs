@@ -5,12 +5,16 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance = null;
-    public List<GameObject> levels;
+    //public List<GameObject> levels;
+    
+    Transition transitionManager;
 
     void Awake()
     {
-        instance = this;
+        transitionManager = GetComponent<Transition>();
     }
+
+    
 
     void RestartLevel()
     {
