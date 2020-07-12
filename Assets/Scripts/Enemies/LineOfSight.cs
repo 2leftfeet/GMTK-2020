@@ -67,6 +67,7 @@ public class LineOfSight : MonoBehaviour
                 if (raycastHit.transform.CompareTag("Player"))
                 {
                     // gameManager.PlayerDetected();
+                    GameObject.Find("/TransitionManager").GetComponent<Transition>().RestartLevel();
                 }
                 vertex = raycastHit.point;
             }

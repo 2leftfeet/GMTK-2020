@@ -66,8 +66,8 @@ public class Transition : MonoBehaviour
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
-            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
-            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+            GameObject nextLevel = Instantiate(levels[levelCounter - 1], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("TeleporterStart").gameObject; //Finding spawn point for next level
 
             //If the child was found.
             if (spawnPoint != null)
