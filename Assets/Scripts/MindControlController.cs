@@ -8,7 +8,7 @@ public interface IAgentInput
     void DoUpdate(NavMeshAgent agent);
 
     void Pause(NavMeshAgent agent);
-    void Resume();
+    void Resume(NavMeshAgent agent);
 }
 
 public class MindControlController : MonoBehaviour

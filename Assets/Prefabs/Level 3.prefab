@@ -6410,7 +6410,7 @@ MonoBehaviour:
   fov: 90
   viewDistance: 5
   rayCount: 50
-  textureTileSize: 5
+  textureTileSize: 1
 --- !u!1 &1242217336973495757
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,7 +9072,7 @@ PrefabInstance:
     - target: {fileID: 1318373893954237650, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.427
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 1318373893954237650, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
@@ -9131,6 +9131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
+      propertyPath: Route.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
+        type: 3}
       propertyPath: Route.Array.data[0]
       value: 
       objectReference: {fileID: 267647214}
@@ -9182,6 +9187,11 @@ PrefabInstance:
     - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
       propertyPath: Route.Array.data[10]
+      value: 
+      objectReference: {fileID: 942638339}
+    - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
+        type: 3}
+      propertyPath: Route.Array.data[11]
       value: 
       objectReference: {fileID: 942638339}
     - target: {fileID: 1318373894695302449, guid: b7d16f2271fdc1048ba7422cca1db5a9,

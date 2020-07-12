@@ -10,7 +10,7 @@ public class LevelEndPlate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Player"))
         {
             transform.Translate(new Vector3(0f, -0.05f, 0f));
             transitionManager.TransitionLevel();

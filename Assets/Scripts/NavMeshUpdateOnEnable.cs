@@ -14,7 +14,6 @@ public class NavMeshUpdateOnEnable : MonoBehaviour {
     }
  
     void OnDisable () {
-        Debug.Log("small pp");
         NavMesh.RemoveNavMeshData(m_NavMeshInstance);
     }
 }

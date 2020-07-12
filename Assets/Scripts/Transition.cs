@@ -66,8 +66,8 @@ public class Transition : MonoBehaviour
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
-            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
-            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+            GameObject nextLevel = Instantiate(levels[levelCounter - 1], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("TeleporterStart").gameObject; //Finding spawn point for next level
 
             //If the child was found.
             if (spawnPoint != null)
@@ -88,8 +88,8 @@ public class Transition : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")){
-            //TransitionLevel();
-            RestartLevel();
+            TransitionLevel();
+            //RestartLevel();
         }
     }
     IEnumerator MoveLevel(GameObject deactivateLevel, GameObject moveLevelToIdentity, GameObject playerSpawnPoint)
@@ -122,6 +122,7 @@ public class Transition : MonoBehaviour
         moveLevelToIdentity.transform.position = initialLevelPosition;
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x-levelSpawnDistance, mainCamera.transform.position.y, mainCamera.transform.position.z);
         player.transform.position = new Vector3(player.transform.position.x-levelSpawnDistance, player.transform.position.y, player.transform.position.z);
+        NavMesh.AddNavMeshData(new NavMeshData());
 
         //Move player down
         playerNewPosition = new Vector3(player.transform.position.x, player.transform.position.y - playerLiftHeight, player.transform.position.z);

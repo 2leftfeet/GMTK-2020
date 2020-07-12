@@ -36,6 +36,6 @@ public class Controllable : MonoBehaviour
 
     public void ResumeInput()
     {
-        input.Resume();
+        input.Resume(agent);
     }
 }
