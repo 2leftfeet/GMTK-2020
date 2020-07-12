@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: a5912a970b73ad2489ba0a51906386bd,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1786,6 +1786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cb59cf779b6455d94af51edc30c771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWithDefault: 1
 --- !u!1 &1127665279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,11 +2729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1008e86e4b6ef3844ac223c946a50354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 93
+  angle: 90
   speed: 1
   startRotatingToRight: 1
   changeDirectionPauseTime: 1
-  notAlternatingDirection: 1
+  notAlternatingDirection: 0
   pauseRotation: 0
 --- !u!135 &1339511503
 SphereCollider:
@@ -2801,14 +2802,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339511501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.77, y: -0.29, z: 2.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1800871262}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1418663081
 GameObject:
   m_ObjectHideFlags: 0
