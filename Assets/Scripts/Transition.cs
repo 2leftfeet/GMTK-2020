@@ -16,24 +16,34 @@ public class Transition : MonoBehaviour
     public float playerLiftDuration = 1f;
     public float playerLiftHeight = 2f;
     private IEnumerator coroutine;
-    GameObject currentLevel;
+    public GameObject currentLevel;
     Vector3 initialLevelPosition;
     bool initiated = false;
     int levelCounter = 0;
     CameraOrbit cameraOrbitScript;
+    [SerializeField] GameObject victory;
+
+    MindControlController mind;
+    ClickIndicator indicator;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
-        levelCounter++;
+        //currentLevel = Instantiate(levels[0], levels[0].transform.position, Quaternion.identity);
+        //levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
+        mind = FindObjectOfType<MindControlController>();
+        indicator = mind.GetComponent<ClickIndicator>();
     }
 
     public void TransitionLevel() {
         if (!initiated)
         {
+            if(GameObject.FindGameObjectsWithTag("Indicator").Length != 0)
+                Destroy(GameObject.FindGameObjectsWithTag("Indicator")[0]);
+               
+            
             if(levelCounter == levels.Count) {
                 Debug.Log("No more levels, initiate ending scene");
                 return;
@@ -54,7 +64,7 @@ public class Transition : MonoBehaviour
                 currentLevel = nextLevel;
             }
             else {
-                Debug.Log("Cannot find spawn point in Level " + levelCounter);
+                victory.SetActive(true);
             }
         }
     }
@@ -63,11 +73,15 @@ public class Transition : MonoBehaviour
     {
         if (!initiated)
         {
+            mind.NewAgent(mind.startAgent);
+            if(GameObject.FindGameObjectsWithTag("Indicator").Length != 0)
+                Destroy(GameObject.FindGameObjectsWithTag("Indicator")[0]);
+
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
-            GameObject nextLevel = Instantiate(levels[levelCounter], instantiatePosition,Quaternion.identity);
-            GameObject spawnPoint = nextLevel.transform.Find("SpawnPoint").gameObject; //Finding spawn point for next level
+            GameObject nextLevel = Instantiate(levels[levelCounter - 1], instantiatePosition,Quaternion.identity);
+            GameObject spawnPoint = nextLevel.transform.Find("TeleporterStart").gameObject; //Finding spawn point for next level
 
             //If the child was found.
             if (spawnPoint != null)

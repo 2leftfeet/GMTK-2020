@@ -8,9 +8,11 @@ public class NavMeshUpdateOnEnable : MonoBehaviour {
  
     public NavMeshData m_NavMeshData;
     private NavMeshDataInstance m_NavMeshInstance;
- 
+    public bool dontcreate = false;
+
     void OnEnable () {
-        m_NavMeshInstance = NavMesh.AddNavMeshData(m_NavMeshData);
+        if(!dontcreate)
+            m_NavMeshInstance = NavMesh.AddNavMeshData(m_NavMeshData);
     }
  
     void OnDisable () {
