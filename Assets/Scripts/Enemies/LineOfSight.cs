@@ -18,7 +18,7 @@ public class LineOfSight : MonoBehaviour
     [SerializeField] private float fov = 90f;
     [SerializeField] float viewDistance = 5f;
     [SerializeField] int rayCount = 50;
-    [SerializeField] float textureTileSize = 5;
+    [SerializeField] float textureTileSize = 1f;
 
 
 
