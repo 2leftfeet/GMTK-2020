@@ -17,6 +17,7 @@ public class MindControlController : MonoBehaviour
     [SerializeField] IAgentInput input;
 
     MindControlEffect mindControl;
+    LineRenderer affectedWire;
 
     [HideInInspector] public Controllable currentAgent;
     Camera mainCamera;
@@ -49,11 +50,24 @@ public class MindControlController : MonoBehaviour
                 var potentialAgent = hit.collider.gameObject.GetComponent<Controllable>();
                 if(potentialAgent != null && potentialAgent != currentAgent)
                 {
+                    if(affectedWire)
+                    {
+                        affectedWire.endColor = Color.white;
+                        affectedWire = null;
+                    }
+
                     currentAgent.input = currentAgent.defaultInput;
                     currentAgent.ResumeInput();
                     currentAgent = potentialAgent;
                     currentAgent.PauseInput();
                     currentAgent.input = input;
+
+                    affectedWire = currentAgent.GetComponentInChildren<LineRenderer>();
+                    if(affectedWire)
+                    {
+                        affectedWire.endColor = Color.green;
+                    }
+                    
                     if(ControlingEnemy()) mindControl.ControlEffect();
                     else mindControl.ControlEffectEnd();
                 }
