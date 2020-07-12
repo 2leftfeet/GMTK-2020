@@ -88,8 +88,8 @@ public class Transition : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")){
-            //TransitionLevel();
-            RestartLevel();
+            TransitionLevel();
+            //RestartLevel();
         }
     }
     IEnumerator MoveLevel(GameObject deactivateLevel, GameObject moveLevelToIdentity, GameObject playerSpawnPoint)

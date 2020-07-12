@@ -154,7 +154,7 @@ MonoBehaviour:
   fov: 90
   viewDistance: 5
   rayCount: 100
-  textureTileSize: 5
+  textureTileSize: 1
 --- !u!1 &1941472834
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1d06c06709a410d820c76830603adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionManager: {fileID: 0}
 --- !u!1001 &93093693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3207,15 +3206,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e204df2bd833d4692315c7038321cf, type: 3}
---- !u!4 &8079812549673826770 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8079812550936409042, guid: d4e204df2bd833d4692315c7038321cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1564707328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8893081046270960488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8893081047265110376, guid: d4e204df2bd833d4692315c7038321cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1564707328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8079812549673826770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8079812550936409042, guid: d4e204df2bd833d4692315c7038321cf,
     type: 3}
   m_PrefabInstance: {fileID: 1564707328}
   m_PrefabAsset: {fileID: 0}

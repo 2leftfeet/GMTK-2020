@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5539679948591229387}
   - component: {fileID: 7749670867825394708}
   - component: {fileID: 3866878280000452066}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pressureplate_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 8471073394381199392}
   - component: {fileID: 9188186822113337020}
   - component: {fileID: 3252284659139496477}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pressureplate_frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2557496308788217214}
   - component: {fileID: 3785678976834708369}
   - component: {fileID: 333856328009230160}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4924,7 +4924,7 @@ GameObject:
   - component: {fileID: 5613786140369988955}
   - component: {fileID: 5613786140369988954}
   - component: {fileID: 5613786140369988959}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pressureplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

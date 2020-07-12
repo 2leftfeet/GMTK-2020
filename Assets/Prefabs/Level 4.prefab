@@ -1827,6 +1827,11 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1318373893028532793}
+    - target: {fileID: 3223213202371236644, guid: 0fb6830dc9e3407489d03a3f5f7f098a,
+        type: 3}
+      propertyPath: textureTileSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3223213202371236647, guid: 0fb6830dc9e3407489d03a3f5f7f098a,
         type: 3}
       propertyPath: m_Name
@@ -2370,7 +2375,7 @@ PrefabInstance:
     - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}
       propertyPath: Route.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1318373893954237657, guid: b7d16f2271fdc1048ba7422cca1db5a9,
         type: 3}

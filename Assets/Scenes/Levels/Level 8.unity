@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: e66d0ff1484b9ab4888bf5063adee8da,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -128,7 +128,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27192
+  m_Name: pb_Mesh-1184872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -291,7 +291,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27188
+  m_Name: pb_Mesh-1184868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -658,7 +658,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27148
+  m_Name: pb_Mesh-1184828
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1058,7 +1058,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-27174
+  m_Name: pb_Mesh-1184854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1225,17 +1225,17 @@ PrefabInstance:
     - target: {fileID: 4236534619504551640, guid: 749786c12e983644882812995b42d48e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3730469
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236534619504551640, guid: 749786c12e983644882812995b42d48e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5566406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236534619504551640, guid: 749786c12e983644882812995b42d48e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.076172
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236534619504551640, guid: 749786c12e983644882812995b42d48e,
         type: 3}
@@ -1287,20 +1287,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1556524474}
-    - target: {fileID: 4311445997934518139, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.082
-      objectReference: {fileID: 0}
     - target: {fileID: 4447280281533825129, guid: 749786c12e983644882812995b42d48e,
         type: 3}
       propertyPath: m_Name
       value: Level 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5599728969336858783, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5599728969414470138, guid: 749786c12e983644882812995b42d48e,
         type: 3}
@@ -1312,11 +1302,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1901274424}
-    - target: {fileID: 5599728969836664601, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5599728969937377810, guid: 749786c12e983644882812995b42d48e,
         type: 3}
       propertyPath: m_Mesh
@@ -1337,56 +1322,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 123417837}
-    - target: {fileID: 5979852847713191412, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: connectPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979852847713191412, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: offset.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979852847713191412, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: offset.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979852847713191412, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: slack
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979852847713191412, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: pointCount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470779235188433429, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 6470779235188433429, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_UseWorldSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916954834714860123, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916954834846658888, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916954835440376569, guid: 749786c12e983644882812995b42d48e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 749786c12e983644882812995b42d48e, type: 3}
 --- !u!1001 &6357423928461127032
@@ -1615,6 +1550,7 @@ MonoBehaviour:
   multiplier: 2
   minFov: 1
   maxFov: 25
+  zoomSensitivity: 2
   target: {fileID: 8292910732853200177}
 --- !u!82 &8292910732318113093
 AudioSource:
