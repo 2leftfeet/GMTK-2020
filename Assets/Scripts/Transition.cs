@@ -22,6 +22,9 @@ public class Transition : MonoBehaviour
     int levelCounter = 0;
     CameraOrbit cameraOrbitScript;
 
+    MindControlController mind;
+    ClickIndicator indicator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +32,17 @@ public class Transition : MonoBehaviour
         levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
+        mind = FindObjectOfType<MindControlController>();
+        indicator = mind.GetComponent<ClickIndicator>();
     }
 
     public void TransitionLevel() {
         if (!initiated)
         {
+            if(GameObject.FindGameObjectsWithTag("Indicator").Length != 0)
+                Destroy(GameObject.FindGameObjectsWithTag("Indicator")[0]);
+               
+            
             if(levelCounter == levels.Count) {
                 Debug.Log("No more levels, initiate ending scene");
                 return;
@@ -63,6 +72,10 @@ public class Transition : MonoBehaviour
     {
         if (!initiated)
         {
+            mind.NewAgent(mind.startAgent);
+            if(GameObject.FindGameObjectsWithTag("Indicator").Length != 0)
+                Destroy(GameObject.FindGameObjectsWithTag("Indicator")[0]);
+
             cameraOrbitScript.enabled = false;
             initiated = true;
             Vector3 instantiatePosition = new Vector3(initialLevelPosition.x+levelSpawnDistance,initialLevelPosition.y,initialLevelPosition.z);
