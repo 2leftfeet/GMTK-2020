@@ -16,14 +16,22 @@ public class MindControlController : MonoBehaviour
     [SerializeField] Controllable startAgent;
     [SerializeField] IAgentInput input;
 
-    Controllable currentAgent;
+    MindControlEffect mindControl;
+
+    [HideInInspector] public Controllable currentAgent;
     Camera mainCamera;
+
+    public bool ControlingEnemy()
+    {
+        return currentAgent!=startAgent;
+    }
 
 
     void Start()
     {
         mainCamera = Camera.main;
         input = GetComponent<IAgentInput>();
+        mindControl = GetComponent<MindControlEffect>();
 
         currentAgent = startAgent;
         currentAgent.input = input;
@@ -46,6 +54,8 @@ public class MindControlController : MonoBehaviour
                     currentAgent = potentialAgent;
                     currentAgent.PauseInput();
                     currentAgent.input = input;
+                    if(ControlingEnemy()) mindControl.ControlEffect();
+                    else mindControl.ControlEffectEnd();
                 }
             }
         }
