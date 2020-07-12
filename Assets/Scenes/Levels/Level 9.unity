@@ -206,7 +206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh194766
+  m_Name: pb_Mesh-1187622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -369,7 +369,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh194798
+  m_Name: pb_Mesh-1187626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -532,18 +532,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1781166488}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1402178646 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7420397515578157058, guid: 2934225aba3bf1341af36379a65fe67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7420397516441101396}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7cb59cf779b6455d94af51edc30c771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1734075717
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +630,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh194728
+  m_Name: pb_Mesh-1187628
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -810,7 +798,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startAgent
       value: 
-      objectReference: {fileID: 1402178646}
+      objectReference: {fileID: 0}
     - target: {fileID: 8833914542693193181, guid: 6998a00ee3cb8a04e98f60342dca30f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -879,7 +867,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh194844
+  m_Name: pb_Mesh-1187620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1278,7 +1266,7 @@ MonoBehaviour:
   minFov: 1
   maxFov: 5
   zoomSensitivity: 2
-  target: {fileID: 8292910732853200177}
+  target: {fileID: 0}
 --- !u!82 &8292910732318113093
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1375,9 +1363,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &8292910732853200177 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1579877702433038693, guid: 2934225aba3bf1341af36379a65fe67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7420397516441101396}
-  m_PrefabAsset: {fileID: 0}

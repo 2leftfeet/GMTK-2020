@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 6bade1f5c4904434d8f57f12259390d3,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: levels.Array.size
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
@@ -620,13 +620,43 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[6]
       value: 
-      objectReference: {fileID: 4447280281533825129, guid: 749786c12e983644882812995b42d48e,
+      objectReference: {fileID: 740040314989494995, guid: bcf2216f665b277428dce0b06d6a0823,
         type: 3}
     - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}
       propertyPath: levels.Array.data[7]
       value: 
-      objectReference: {fileID: 961020895269404577, guid: 2930a3df37e8b684ca7d383fee8920d2,
+      objectReference: {fileID: 4447280281533825129, guid: 749786c12e983644882812995b42d48e,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[8]
+      value: 
+      objectReference: {fileID: 4447280281533825129, guid: 749786c12e983644882812995b42d48e,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[9]
+      value: 
+      objectReference: {fileID: 163831206069455453, guid: 135ec9608b4f0ca41b476759f77de181,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[10]
+      value: 
+      objectReference: {fileID: 7420397515886695952, guid: 2934225aba3bf1341af36379a65fe67c,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[11]
+      value: 
+      objectReference: {fileID: 5407682814976692333, guid: 1974eafa4988d1845bae7959f15fcb68,
+        type: 3}
+    - target: {fileID: 175220092199190218, guid: 12f77e4e83e94434d83616c8828822e2,
+        type: 3}
+      propertyPath: levels.Array.data[12]
+      value: 
+      objectReference: {fileID: 2258366281103434938, guid: 6194f3c7ba50c0843a279abefc608323,
         type: 3}
     - target: {fileID: 175220092199190219, guid: 12f77e4e83e94434d83616c8828822e2,
         type: 3}

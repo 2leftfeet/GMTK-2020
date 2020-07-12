@@ -29,7 +29,6 @@ public class Transition : MonoBehaviour
         levelCounter++;
         initialLevelPosition = currentLevel.transform.position;
         cameraOrbitScript = mainCamera.GetComponent<CameraOrbit>();
-        //CalculteCameras();
     }
 
     public void TransitionLevel() {
