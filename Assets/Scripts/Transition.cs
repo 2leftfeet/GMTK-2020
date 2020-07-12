@@ -46,6 +46,7 @@ public class Transition : MonoBehaviour
             
             if(levelCounter == levels.Count) {
                 Debug.Log("No more levels, initiate ending scene");
+                victory.SetActive(true);
                 return;
             }
             cameraOrbitScript.enabled = false;
@@ -64,6 +65,7 @@ public class Transition : MonoBehaviour
                 currentLevel = nextLevel;
             }
             else {
+                Debug.Log("asdga");
                 victory.SetActive(true);
             }
         }
